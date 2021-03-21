@@ -1,0 +1,12 @@
+services:
+  App.controllers.StatusGetController:
+    class: ../../controllers/StatusGetController
+    arguments: []
+
+  App.controllers.UserPostController:
+    class: ../../controllers/user/UserPostController
+    arguments: ['@User.application.UserCreator']
+
+  App.controllers.UserGetController:
+    class: ../../controllers/user/UserGetController
+    arguments: ['@User.application.UserFinder']

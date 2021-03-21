@@ -1,0 +1,13 @@
+services:
+
+  User.application.UserCreator:
+    class: ../../../../Contexts/User/application/create/UserCreator
+    arguments: ['@User.domain.UserRepository']
+
+  User.application.UserFinder:
+    class: ../../../../Contexts/User/application/find/UserFinder
+    arguments: ['@User.domain.UserRepository']
+
+  User.domain.UserRepository:
+    class: ../../../../Contexts/User/infrastructure/InMemoryUserRepository
+    arguments: []
